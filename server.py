@@ -20,7 +20,7 @@ def handleClient():
 
     while True:
         try:
-            # Atleast two player required to play this game
+       
             if(len(list(CLIENTS.keys())) >=2):
                 if(not playersJoined):
                     playersJoined = True
@@ -38,10 +38,10 @@ def handleClient():
 
                         flashNumberList.remove(int(randomNumber))
                     except:
-                        # Removing Player cleint when they close / terminate the session
+                    
                         del CLIENTS[currentName]
 
-                    # After Every 3 Seconds we are sending one number to each CLIENT
+                  
                     time.sleep(3)
 
         except:
@@ -93,7 +93,3 @@ def setup():
 
 
 setup()
-
-
-# Storing Client data
-# Sending Random numbers to CLIENT
